@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%; /* zinc-900 */
+    --foreground: 0 0% 98%; /* white-ish */
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 220 79% 63%; /* cornflower blue */
+    --primary-foreground: 240 10% 3.9%;
+
+    --secondary: 240 5.9% 10%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 220 79% 63%;
+
+    --radius: 0.5rem;
+
+    font-size: 16px; /* Adjusted base font size */
+  }
+
+  * {
+    @apply border-border selection:bg-cornflower/20 selection:text-white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    @apply w-full overflow-x-hidden;
+  }
+
+  body {
+    @apply bg-zinc-900 text-foreground antialiased font-inter;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-cornflower to-cornflower-light bg-clip-text text-transparent;
+  }
+
+  .bg-gradient-subtle {
+    @apply bg-gradient-to-br from-zinc-900 to-zinc-800;
+  }
+
+  .bg-gradient-blue {
+    @apply bg-gradient-to-br from-cornflower-dark to-cornflower-light;
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-sm bg-zinc-800/50 border border-zinc-700/50 shadow-lg;
+    box-shadow: 0 0 15px rgba(100, 149, 237, 0.3); /* Cornflower blue with some transparency */
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .scrollbar-hidden {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
