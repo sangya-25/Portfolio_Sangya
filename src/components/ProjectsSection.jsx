@@ -95,6 +95,12 @@ const ProjectsSection = () => {
       tags: ['Express.js', 'MongoDB', 'Node.js','HTML, CSS, JS'],
       image: '/scatch.png',
       link: 'https://github.com/sangya-25/Scatch.git'
+    },{
+      title: 'Student-Teacher Appointment Booking System',
+      description: 'A dynamic, full-stack web platform built using the MERN stack to streamline academic scheduling. It features secure, role-based dashboards for admins, teachers, and students with real-time booking, appointment tracking, and automated email notifications. Enhanced with GSAP animations and deployed on Vercel, this system replaces manual scheduling with a scalable, user-friendly digital interface.',
+      tags: ['Express.js', 'MongoDB', 'Node.js','HTML, CSS, JS','GSAP','NodeMailer','Vercel'],
+      image: '/student-teacher.png',
+      link: 'https://student-teacher-appointment-omega.vercel.app/'
     }
   ];
 
