@@ -101,6 +101,13 @@ const ProjectsSection = () => {
       tags: ['Express.js', 'MongoDB', 'Node.js','HTML, CSS, JS','GSAP','NodeMailer','Vercel'],
       image: '/image.png',
       link: 'https://student-teacher-appointment-omega.vercel.app/'
+    },
+    {
+      title: 'QuickChat – Real-Time Chat Communication Web App',
+      description: 'QuickChat is a real-time chat web application built with the MERN stack and powered by Socket.io for instant messaging. The app enables seamless one-on-one and group conversations with live message updates, user presence indicators, and a modern, responsive UI.',
+      tags: ['Mongodb','Node.js','Express.js','React','Tailwind CSS','Socket.io','Vercel'],
+      image: '/quickChat.png',
+      link: 'https://chatapp-socket-frontend.vercel.app/login'
     }
   ];
 
