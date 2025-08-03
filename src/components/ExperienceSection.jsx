@@ -2,12 +2,14 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Briefcase } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ExperienceSection = () => {
   const sectionRef = useRef(null);
   const headingRef = useRef(null);
+  const navigate = useNavigate();
   
   useEffect(() => {
     // GSAP animations for the Experience section triggered on scroll
@@ -132,6 +134,16 @@ const ExperienceSection = () => {
                 </div>
               </div>
             ))}
+          </div>
+          
+          {/* Button to navigate to detailed experience page */}
+          <div className="text-center mt-8">
+            <button
+              onClick={() => navigate('/Portfolio_Sangya/hack_experience')}
+              className="inline-flex items-center gap-2 bg-zinc-700 hover:bg-zinc-600 text-white px-6 py-3 rounded-md font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg border border-cornflower shadow-[0_0_15px_rgba(100,149,237,0.5)]"
+            >
+              Explore Hack Experience
+            </button>
           </div>
         </div>
       </div>
