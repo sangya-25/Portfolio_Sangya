@@ -15,7 +15,7 @@ const HackExperience = () => {
       title: "NSUT, Shloka Decode Hackathon",
       position: "1st Place",
       project: "TATSAM - NSUT'S HINDI CULTURAL WEBSITE",
-      image: `${import.meta.env.BASE_URL}img6.jpg`,
+      image: `${import.meta.env.BASE_URL}img10.jpg`,
       year: "2024"
     },
     {
@@ -23,7 +23,7 @@ const HackExperience = () => {
       title: "MAIT, BuildWars Hackathon",
       position: "Top 5",
       project: "AI-Powered RTI Generator",
-      image: `${import.meta.env.BASE_URL}img6.jpg`,
+      image: `${import.meta.env.BASE_URL}img9.jpg`,
       year: "2025"
     },
     {
@@ -31,15 +31,15 @@ const HackExperience = () => {
       title: "IIT, Hack'24 Hackathon",
       position: "Top 6",
       project: "Database Aggregator",
-      image: "`${import.meta.env.BASE_URL}img6.jpg`",
+      image: `${import.meta.env.BASE_URL}img3.jpg`,
       year: "2025"
     },
     {
       id: 4,
-      title: "SDI, Smart Delhi Ideathon",
-      position: "Top 30",
-      project: "Women Safety Web App - Her Suraksha",
-      image: `${import.meta.env.BASE_URL}img6.jpg`,
+      title: "CodeClash2.0, Google",
+      position: "Top 10",
+      project: "Sniffy - Smart Gas Leakage Detection System, IoT-based",
+      image: `${import.meta.env.BASE_URL}img5.jpg`,
       year: "2025"
     },
     {
@@ -47,7 +47,22 @@ const HackExperience = () => {
       title: "She Builds, Hackathon",
       position: "Top 40",
       project: "AI-Powered Roommate Finder - Harmony Match",
-      image: `${import.meta.env.BASE_URL}img6.jpg`,
+      image: `${import.meta.env.BASE_URL}img8.jpg`,
+      year: "2025"
+    },
+    {
+      id: 6,
+      title: "WebDash Hackathon, IEEE JMI",
+      position: "Ist Position",
+      project: "Revibe-A Sustainable E-commerce Platform",
+      image: `${import.meta.env.BASE_URL}img1.jpg`,
+      year: "2025"
+    },{
+      id: 7,
+      title: "SDI, Smart Delhi Ideathon",
+      position: "Top 30",
+      project: "Women Safety Web App - Her Suraksha",
+      image: `${import.meta.env.BASE_URL}img2.jpg`,
       year: "2025"
     }
   ];
@@ -105,7 +120,7 @@ const HackExperience = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white overflow-hidden">
       <button
-  onClick={() => navigate('/Portfolio_Sangya')}
+  onClick={() => navigate('/')}
   className="mt-4 ml-4 inline-flex items-center gap-2 bg-zinc-700 hover:bg-zinc-600 text-white px-6 py-3 rounded-md font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg border border-cornflower shadow-[0_0_15px_rgba(100,149,237,0.5)]"
 >
   Back
@@ -139,35 +154,37 @@ const HackExperience = () => {
                   onClick={() => goToSlide(index)}
                 >
                   <div
-                    className="w-full h-full bg-zinc-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-zinc-700 group hover:border-blue-500/50 transition-all duration-300"
-                    style={{
-                      boxShadow:
-                        index === currentIndex
-                          ? '0 0 40px rgba(59, 130, 246, 0.4), 0 0 80px rgba(59, 130, 246, 0.2)'
-                          : '0 0 20px rgba(59, 130, 246, 0.1)'
-                    }}
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div className="relative h-full flex flex-col">
-                      <div className="h-3/3 overflow-hidden">
-                        <img
-                          src={hackathon.image}
-                          alt={hackathon.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                        />
-                        <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                          {hackathon.year}
-                        </div>
-                      </div>
-                      <div className="h-1/3 p-4 flex flex-col justify-center">
-                        <h3 className="font-bold text-lg mb-1 text-white group-hover:text-blue-400 transition-colors">
-                          {hackathon.title}
-                        </h3>
-                        <p className="text-blue-400 font-semibold text-sm mb-1">{hackathon.position}</p>
-                        <p className="text-zinc-400 text-sm">{hackathon.project}</p>
-                      </div>
-                    </div>
-                  </div>
+  className="w-full h-full bg-zinc-800 backdrop-blur-0 rounded-2xl overflow-hidden border border-zinc-700 transition-all duration-300"
+  style={{
+    boxShadow:
+      index === currentIndex
+        ? '0 0 40px rgba(59, 130, 246, 0.4), 0 0 80px rgba(59, 130, 246, 0.2)'
+        : '0 0 20px rgba(59, 130, 246, 0.1)'
+  }}
+>
+  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-100 transition-opacity duration-300"></div>
+
+  <div className="relative h-full flex flex-col">
+    <div className="h-3/3 overflow-hidden">
+      <img
+        src={hackathon.image}
+        alt={hackathon.title}
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+        {hackathon.year}
+      </div>
+    </div>
+    <div className="h-1/3 p-4 flex flex-col justify-center">
+      <h3 className="font-bold text-lg mb-1 text-white">
+        {hackathon.title}
+      </h3>
+      <p className="text-blue-400 font-semibold text-sm mb-1">{hackathon.position}</p>
+      <p className="text-zinc-400 text-sm">{hackathon.project}</p>
+    </div>
+  </div>
+</div>
+
                 </div>
               ))}
             </div>

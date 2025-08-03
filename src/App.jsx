@@ -33,7 +33,7 @@ function App() {
     <div className="min-h-screen w-full bg-zinc-900 text-white overflow-x-hidden">
       <Routes>
         <Route
-          path="/Portfolio_Sangya"
+          path="/"
           element={
             <main className="w-full">
               <Navbar />
@@ -47,7 +47,7 @@ function App() {
           }
         />
         <Route
-          path="/Portfolio_Sangya/hack_experience"
+          path="/hack_experience"
           element={
             <div className="min-h-screen w-full bg-zinc-900 text-white overflow-x-hidden">
               <HackExperience />
@@ -55,7 +55,7 @@ function App() {
           }
         />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
